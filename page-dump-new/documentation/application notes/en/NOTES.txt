@@ -1,0 +1,2 @@
+files not present in en/ were not translate because of insignificant changes (e.g. Company Logo Updated). 
+See Rev 1.1 for translations
