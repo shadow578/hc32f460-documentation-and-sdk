@@ -84,8 +84,8 @@ connected to `MS35775` stepper driver.
 - `MS1` configurable via resistor `R79` (GND) and `R78` (3V3); `R78` is populated with 10k
 - `MS2` configurable via resistor `R76` (GND) and `R77` (3V3); `R77` is populated with 10k; -> 1/16 microstepping
 - `PDN` connected to `3V3` via resistor `R82` (10k); -> no power down
-- `DIR` connected to `PB3`
-- `STEP` connected to `PB4`
+- `DIR` connected to `PB5`
+- `STEP` connected to `PB6`
 - `EN` connected to `PC3`
 
 > note: extrapolated from E-Stepper circuit
