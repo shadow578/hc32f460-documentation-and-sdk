@@ -103,14 +103,19 @@ for the PA8 connection, scrape away the solder mask on one of the wires near the
 ## Configuring Marlin
 
 Change the Marlin configuration to the following:
-- Change the stepper driver type from `TMC2208_STANDALONE` to `TMC2208`
-- in Configuration_adv.h, in the `@tmc/control` section, add the pin definitions:
-  - `#define X_SERIAL_TX_PIN PB10`
-  - `#define Y_SERIAL_TX_PIN PA8`
-  - `#define Z_SERIAL_TX_PIN PC14`
-  - `#define E0_SERIAL_TX_PIN PH2`
-- in the same section, update the `RSENSE` value of X,Y,Z,E0 to `0.15` (this board used 150 mOhm shunt resistors)
-- enable `TMC_DEBUG` until you've confirmed that everything works
+- In `Configuration.h`, in `@section stepper drivers`:
+  - Change the stepper driver types from `TMC2208_STANDALONE` to `TMC2208` for X,Y,Z,E0
+- in Configuration_adv.h, in the `@section tmc/config` section:
+  - add the pin definitions (RX is automatically set to TX if not defined):
+    - `#define X_SERIAL_TX_PIN PB10`
+    - `#define Y_SERIAL_TX_PIN PA8`
+    - `#define Z_SERIAL_TX_PIN PC14`
+    - `#define E0_SERIAL_TX_PIN PH2`
+  - add `#define TMC_BAUD_RATE 19200` to use 19200 baud for serial communication
+  - update the `RSENSE` of all axis to `#define [X]_RSENSE 0.15` (this board uses 150 mOhm current sense resistors)
+  - update the `CHOPPER_TIMING` to `#define CHOPPER_TIMING CHOPPER_DEFAULT_24V`
+  - optionally enable `MONITOR_DRIVER_STATUS`
+  - enable `TMC_DEBUG` until you've confirmed that everything works
 
 
 Now, flash the firmware onto your modified mainboard. 
@@ -125,6 +130,7 @@ there should be no errors in the output of the command.
 
 if one stepper driver shows all registers as all zeros, double-check your wiring.
 additionally, double-check that the used pins are actually not connected to anything else (different revisions may differ here).
+if everything seems right, try different values for `TMC_BAUD_RATE`. Lower values may help with signal integrity issues, while higher values can help with the stepper drivers having issues detecting that there's a UART signal present. 19200 baud should be a good starting point.
 
 
 ## Disclaimer
