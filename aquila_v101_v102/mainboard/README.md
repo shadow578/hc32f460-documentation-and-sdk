@@ -2,6 +2,18 @@
 
 the Aquila V1.0.1 / V1.0.2 mainboards are used in the Voxelab Aquila, Aqulia X2 and Aquila S2 3D printers.
 
+## Modifictations
+
+- [TMC Stepper Control](./mods/tmc_stepper_control.md)
+
+
+## PCB Tracing
+
+For a PCB Tracing project, see [pcb_tracing](./pcb_tracing.psd) document.
+this Photoshop project contains two layers for the top and bottom of the PCB, aligned so that optical tracing is fairly easy.
+the project can be opened in Photoshop or Photopea. GIMP may also work, idk.
+
+
 ## ICs
 
 - `HC32F460KCTA` SoC (32-bit ARM Cortex-M4)
