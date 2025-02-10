@@ -7,9 +7,20 @@ the Aquila V1.0.1 / V1.0.2 mainboards are used in the Voxelab Aquila, Aqulia X2 
 - [TMC Stepper Control](./mods/tmc_stepper_control.md)
 
 
+## PCB
+
+High-Resolution images of the mainboard are available in this directory.
+- [High-Resolution Image of the Mainboard, Top layer](./pcb_front.jpg)
+- [High-Resolution Image of the Mainboard, Bottom layer](./pcb_back.jpg)
+- [Mainboard installed in the printer](./MB.jpg)
+- [Mainboard with wiring annotated](./MB_annotated.png)
+- [Close-Up of the Stepper Driver](./step%20driver.jpg)
+- [Close-Up of the Stepper Driver, partially traced](./wiring-close-up.jpg)
+
+
 ## PCB Tracing
 
-For a PCB Tracing project, see [pcb_tracing](./pcb_tracing.psd) document.
+For a PCB tracing project, see [pcb_tracing](./pcb_tracing.psd) document.
 this Photoshop project contains two layers for the top and bottom of the PCB, aligned so that optical tracing is fairly easy.
 the project can be opened in Photoshop or Photopea. GIMP may also work, idk.
 

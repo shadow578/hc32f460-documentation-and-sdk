@@ -81,7 +81,7 @@ Since PA8 is connected to the CH340G, this trace must be cut.
 See the following image for where to cut. 
 
 
-TODO IMAGE HERE PCB MOD BACK
+![PCB Bottom Layer trace to cut](./img/tmc_mod_back.jpg)
 
 
 After cutting the trace, ensure there's no copper sticking up that could short out to the case and measure with a multimeter that the trace is actually cut completely.
@@ -93,11 +93,14 @@ To protect the area, place a bit of kapton tape over it.
 Solder the wires as shown in the following image.
 
 
-TODO IMAGE HERE PCB MOD FRONT
+![PCB Top wiring plan](./img/tmc_mod_front.jpg)
 
 
 to ensure the wires don't come loose, secure them with a bit of hot glue.
 for the PA8 connection, scrape away the solder mask on one of the wires near the HC32 before soldering.
+
+
+![My Mainboard after the modification](./img/tmc_mod_done.jpg)
 
 
 ## Configuring Marlin
